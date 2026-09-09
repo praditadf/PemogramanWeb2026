@@ -1,11 +1,17 @@
 # Jobsheet 1 — HTML5 Semantic Skeleton
 
+### Nama : Achmad Pradita Dwi Firmansyah
+
+### Kelas / Absen : TI-2G / 01
+
+### NIM : 254107020130
+
 Sub-CPMK: Menyusun struktur halaman web dengan HTML5 semantic.
 
 ## Isi tahap ini
 
 - `index.html` — Beranda dengan ringkasan statistik (dummy).
-  
+
   ![Screenshot](../jobsheet-01/Dokumentasi/img/index.png)
 
 - `buku/list.html` — tabel daftar buku statis (5 baris dummy).

@@ -1,5 +1,11 @@
 # Jobsheet 2 — CSS3 Styling Dasar
 
+### Nama : Achmad Pradita Dwi Firmansyah
+
+### Kelas / Absen : TI-2G / 01
+
+### NIM : 254107020130
+
 Sub-CPMK: Mengimplementasikan styling dasar dengan CSS3.
 
 ## Perubahan dari Jobsheet 1
