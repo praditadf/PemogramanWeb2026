@@ -30,9 +30,6 @@ Sub-CPMK: Menyusun struktur halaman web dengan HTML5 semantic.
 
   ![Screenshot](../jobsheet-01/Dokumentasi/img/anggota-tambah.png)
 
-## Cara menjalankan
-
-Buka `index.html` langsung di browser (belum butuh server).
 
 ## Catatan
 

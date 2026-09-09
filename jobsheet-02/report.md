@@ -11,9 +11,13 @@ Sub-CPMK: Mengimplementasikan styling dasar dengan CSS3.
 ## Perubahan dari Jobsheet 1
 
 - Tambah `assets/css/style.css` (box model, Flexbox untuk navbar, CSS Grid untuk kartu statistik Beranda).
+
   ![Screenshot](../jobsheet-02/Dokumentasi/img/img1.png)
+
 - Semua halaman `.html` ditambahkan `<link rel="stylesheet">` ke `style.css` (path relatif menyesuaikan kedalaman folder).
+
   ![Screenshot](../jobsheet-02/Dokumentasi/img/img2.png)
+
 - Struktur HTML **tidak diubah** — hanya tampilan.
 
 ## - index.html
