@@ -194,7 +194,7 @@ footer {
 /* Tabel Responsif */
 .table-responsive {
   max-height: 360px;
-  overflow-x: auto;
+  overflow: auto;
 }
 
 /* Hamburger Menu (checkbox hack) */
