@@ -61,6 +61,27 @@ function hapusError(input) {
   }
 }
 
+function initValidasiLogin() {
+  const formLogin = document.getElementById("form-account");
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
+  if (!formLogin || !usernameInput || !passwordInput) return;
+
+  formLogin.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let valid = true;
+    const usernameBenar = "admin";
+    const passwordBenar = "admin123";
+
+    if (usernameInput.value !== usernameBenar || passwordInput.value !== passwordBenar) {
+      tampilkanError(passwordInput, "Username atau password salah!");
+      valid = false;
+    } else {
+      window.location.href = "index.html";
+    }
+  });
+}
+
 function initValidasiForm() {
   const form = document.getElementById("form-tambah");
   if (!form) return;
@@ -118,5 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initNavToggle();
   initHapusConfirm();
   initTableFilter();
+  initValidasiLogin();
   initValidasiForm();
 });
