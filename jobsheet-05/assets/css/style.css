@@ -47,6 +47,10 @@ header nav a {
   font-weight: 500;
 }
 
+.account h1 {
+  margin: auto;
+}
+
 /* Main Layout */
 main {
   max-width: 1000px;
@@ -65,6 +69,56 @@ section {
 section h2 {
   margin-bottom: 1rem;
   color: #1d7b8a;
+}
+
+.main-account {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.main-account h2 {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.main-account p {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#form-account p,
+#form-account a{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#form-account label {
+  width: 90px;
+  text-align: left;
+}
+
+#form-account input {
+  width: 100%;
+  max-width: 275px;
+  margin: 0;
+}
+
+#form-account button {
+  display: block;
+  background-color: #1d7b8a;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.3rem auto;
+}
+
+#form-account button:hover {
+  background-color: #164869;
 }
 
 /* Kartu Statistik (CSS Grid) */

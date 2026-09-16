@@ -38,8 +38,9 @@ function initTableFilter() {
 
       const teks1 = kolom1 ? kolom1.textContent.toLowerCase() : "";
       const teks2 = kolom2 ? kolom2.textContent.toLowerCase() : "";
-      
-      row.style.display = teks1.includes(keyword) || teks2.includes(keyword) ? "" : "none";
+
+      row.style.display =
+        teks1.includes(keyword) || teks2.includes(keyword) ? "" : "none";
     });
   });
 }
@@ -58,6 +59,28 @@ function hapusError(input) {
   if (next && next.classList.contains("error")) {
     next.remove();
   }
+}
+
+function initValidasiLogin() {
+  const formLogin = document.getElementById("form-account");
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
+  if (!formLogin || !usernameInput || !passwordInput) return;
+
+  formLogin.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let valid = true;
+    const usernameBenar = "admin";
+    const passwordBenar = "admin123";
+
+    if (usernameInput.value !== usernameBenar || passwordInput.value !== passwordBenar) {
+      tampilkanError(usernameInput, "Username atau password salah!");
+      tampilkanError(passwordInput, "Username atau password salah!");
+      valid = false;
+    } else {
+      window.location.href = "index.html";
+    }
+  });
 }
 
 function initValidasiForm() {
@@ -117,5 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initNavToggle();
   initHapusConfirm();
   initTableFilter();
+  initValidasiLogin();
   initValidasiForm();
 });
