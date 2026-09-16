@@ -34,8 +34,13 @@ function initTableFilter() {
     const keyword = input.value.toLowerCase();
     const rows = table.querySelectorAll("tbody tr");
     rows.forEach(function (row) {
-      const teks = row.textContent.toLowerCase();
-      row.style.display = teks.includes(keyword) ? "" : "none";
+      const kolom1 = row.querySelector("td:first-child");
+      const kolom2 = row.querySelector("td:nth-child(2)");
+
+      const teks1 = kolom1 ? kolom1.textContent.toLowerCase() : "";
+      const teks2 = kolom2 ? kolom2.textContent.toLowerCase() : "";
+      
+      row.style.display = teks1.includes(keyword) || teks2.includes(keyword) ? "" : "none";
     });
   });
 }

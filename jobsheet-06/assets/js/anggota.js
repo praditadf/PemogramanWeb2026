@@ -8,7 +8,7 @@ async function muatDaftarAnggota() {
     tbody.innerHTML = "";
 
     try {
-        await new Promise((resolve) => setTimeout(resolve, 600));
+        await new Promise((resolve) => setTimeout(resolve, 1500));
 
         const res = await fetch("../data/anggota.json");
         if (!res.ok) {

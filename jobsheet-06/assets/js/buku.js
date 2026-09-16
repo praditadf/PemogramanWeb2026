@@ -9,7 +9,7 @@ async function muatDaftarBuku() {
 
     try {
         // simulasi display jaringan agar loading indicator terlihat
-        await new Promise((resolve) => setTimeout(resolve,600));
+        await new Promise((resolve) => setTimeout(resolve, 1500));
 
         const res = await fetch("../data/buku.json");
         if (!res.ok) {
@@ -24,6 +24,7 @@ async function muatDaftarBuku() {
             "<td>" + buku.pengarang + "</td>" +
             "<td>" + buku.tahun + "</td>" +
             "<td>" + buku.stok + "</td>" +
+            "<td>" + buku.kategori + "</td>" +
             "<td>" + 
             "<button type=\"button\">Edit</button> " +
             "<button type=\"button\" Class=\"btn-hapus\">Hapus</button> " +
