@@ -33,8 +33,13 @@ function initTableFilter() {
     const keyword = input.value.toLowerCase();
     const rows = table.querySelectorAll("tbody tr");
     rows.forEach(function (row) {
-      const teks = row.textContent.toLowerCase();
-      row.style.display = teks.includes(keyword) ? "" : "none";
+      const kolom1 = row.querySelector("td:first-child");
+      const kolom2 = row.querySelector("td:nth-child(2)");
+
+      const teks1 = kolom1 ? kolom1.textContent.toLowerCase() : "";
+      const teks2 = kolom2 ? kolom2.textContent.toLowerCase() : "";
+      
+      row.style.display = teks1.includes(keyword) || teks2.includes(keyword) ? "" : "none";
     });
   });
 }
@@ -69,7 +74,7 @@ function initValidasiForm() {
     } else if (judul) {
       hapusError(judul);
     }
-    
+
     const pengarang = form.querySelector("[name='pengarang']");
     if (pengarang && pengarang.value.trim() === "") {
       tampilkanError(pengarang, "Pengarang wajib diisi.");
@@ -77,12 +82,12 @@ function initValidasiForm() {
     } else if (pengarang) {
       hapusError(pengarang);
     }
-  
+
     const tahun = form.querySelector("[name='tahun']");
     if (tahun) {
       const nilai = parseInt(tahun.value, 10);
       if (isNaN(nilai) || nilai < 1900 || nilai > 2026) {
-        tampilkanError(tahun, "Tahun harus di antara 1900-2026");
+        tampilkanError(tahun, "Tahun harus di antara 1900-2026.");
         valid = false;
       } else {
         hapusError(tahun);
@@ -99,7 +104,7 @@ function initValidasiForm() {
         hapusError(stok);
       }
     }
-    
+
     //...(pengecekan pengarang, tahun, stok dengan pola serupa)
 
     if (!valid) {
