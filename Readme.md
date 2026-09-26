@@ -12,3 +12,4 @@
 - [jobsheet4](https://praditadf.github.io/PemogramanWeb2026/jobsheet-04/index.html)
 - [jobsheet5](https://praditadf.github.io/PemogramanWeb2026/jobsheet-05/login.html)
 - [jobsheet6](https://praditadf.github.io/PemogramanWeb2026/jobsheet-06/login.html)
+- [jobsheet7](https://github.com/praditadf/PemogramanWeb2026/tree/main/jobsheet-07)
