@@ -21,7 +21,7 @@ if (!is_numeric($tahun) || $tahun < 1900 || $tahun > 2026) {
 if (!is_numeric($stok) || $stok < 0) {
     $errors[] = "Stok tidak boleh negatif.";
 }
-if ($isbn !== '' && preg_match('/^[0-9-]+$/', $isbn)) {
+if ($isbn !== '' && !preg_match('/^[0-9-]+$/', $isbn)) {
     $errors[] = "ISBN hanya berisi angka dan tanda hubung.";
 }
 
