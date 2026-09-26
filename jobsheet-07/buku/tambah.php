@@ -18,6 +18,10 @@ unset($_SESSION['flash']);
             <input type="text" id="judul" name="judul" required>
         </p>
         <p>
+            <label for="pengarang">Pengarang</label><br>
+            <input type="text" id="pengarang" name="pengarang" required>
+        </p>
+        <p>
             <label for="tahun">Tahun Terbit</label><br>
             <input type="number" id="tahun" name="tahun" min="1900" max="2026" required>
         </p>
