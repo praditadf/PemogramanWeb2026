@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <title>SIMPUS-Mini | Peminjaman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="buku/list.html">Daftar Buku</a></li>
+                <li><a href="buku/tambah.html">Tambah Buku</a></li>
+                <li><a href="anggota/list.html">Daftar Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Peminjaman Buku Baru</h2>
+        </section>
+        <form>
+            <p>
+                <label for="anggota_id">Anggota</label></br>
+                <select id="anggota_id" name="anggota_id" required>
+                    <option value="">-- Pilih Anggota --</option>
+                </select>
+            </p>
+            <p>
+                <label for="buku_id">Buku (hanya yang stoknya tersedia)</label><br>
+                <select id="buku_id" name="buku_id" required>
+                    <option value="">-- Pilih Buku --</option>
+                </select>
+            </p>
+            <p>
+                <label for="tgl_pinjam">Tanggal Pinjam</label><br>
+                <input type="date" id="tgl_pinjam" name="tgl_pinjam" required>
+            </p>
+            <p>
+                <button type="submit">Simpan</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet </p>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
