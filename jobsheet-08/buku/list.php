@@ -16,7 +16,7 @@ $daftarBuku = $pdo->query("SELECT * FROM buku ORDER BY ID DESC")->fetchAll(PDO::
 
     <div class="search-box">
         <label for="search-input">Cari Judul Buku</label>
-        <input type="text" id="search-input" placeholder="Ketik judul buku...">
+        <input type="text" id="search-input" placeholder="Ketik judul buku / nama pengarang...">
     </div>
     <p id="loading-indicator" style="display:none;">Memuat data...</p>
     <div class="table-responsive">

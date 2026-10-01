@@ -15,7 +15,7 @@ $daftarAnggota = $pdo->query("SELECT * FROM anggota ORDER BY id DESC")->fetchAll
             <?php endif; ?>
             <div class="search-box">
                 <label for="search-input">Cari Anggota</label>
-                <input type="text" id="search-input" placeholder="Ketik nama anggota...">
+                <input type="text" id="search-input" placeholder="Ketik no anggota / nama anggota...">
             </div>
             <p id="loading-indicator" style="display:none;">Memuat data...</p>
             <div class="table-responsive">
