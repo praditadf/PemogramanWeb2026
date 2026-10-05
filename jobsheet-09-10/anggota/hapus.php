@@ -1,5 +1,5 @@
 <?php
-session_start();
+require __DIR__ . '/../includes/auth.php';
 require __DIR__ . '/../includes/koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -8,10 +8,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $id = $_POST['id'] ?? null;
-if ($id) {
+$role = $_SESSION['user']['role'] ?? null;
+if ($id && $role === 'admin') {
     $stmt = $pdo->prepare("DELETE FROM anggota WHERE id = :id");
     $stmt->execute(['id' => $id]);
     $_SESSION['flash'] = ['type' => 'success', 'pesan' => 'Anggota berhasil dihapus.'];
+}
+if ($role !== 'admin') {
+    $_SESSION['flash'] = ['type' => 'error', 'pesan' => 'Anda tidak memiliki izin untuk menghapus anggota.'];
 }
 
 header('Location: list.php');

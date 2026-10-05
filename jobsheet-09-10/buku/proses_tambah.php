@@ -1,6 +1,7 @@
 <?php
-session_start();
+require __DIR__ . '/../includes/auth.php';
 require __DIR__ . '/../includes/koneksi.php';
+
 $judul = trim($_POST['judul'] ?? '');
 $pengarang = trim($_POST['pengarang'] ?? '');
 $tahun = $_POST['tahun'] ?? '';
