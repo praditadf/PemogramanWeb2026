@@ -8,6 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+csrf_verify();
+
 $id = $_POST['id'] ?? null;
 $role = $_SESSION['user']['role'] ?? null;
 if ($id && $role === 'admin') {
