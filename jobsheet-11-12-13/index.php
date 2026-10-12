@@ -5,7 +5,7 @@ require __DIR__ . '/includes/koneksi.php';
 
 $totalBuku = $pdo->query("SELECT COUNT(*) FROM buku")->fetchColumn();
 $totalAnggota = $pdo->query("SELECT COUNT(*) FROM anggota")->fetchColumn();
-$sedangDipinjam = $pdo->query("SELECT COUNT(*) FROM peminjaman WHERE status = 'dipinjam'")->fetchColumn();
+$totalDipinjam = $pdo->query("SELECT COUNT(*) FROM peminjaman WHERE status = 'dipinjam'")->fetchColumn();
 
 ?>
 <section>
@@ -24,7 +24,7 @@ $sedangDipinjam = $pdo->query("SELECT COUNT(*) FROM peminjaman WHERE status = 'd
     </article>
     <article>
         <h3>Sedang Dipinjam</h3>
-        <p><?php echo $sedangDipinjam; ?></p>
+        <p><?php echo $totalDipinjam; ?></p>
     </article>
     <article>
         <h3>Buku Terlambat</h3>
