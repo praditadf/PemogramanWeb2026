@@ -71,7 +71,7 @@ $totalPages = max(1, ceil($totalRows / $perPage));
                             <td><?php echo e($buku['pengarang']); ?></td>
                             <td><?php echo $buku['tahun']; ?></td>
                             <td><?php echo $buku['stok']; ?></td>
-                            <td><?php echo $buku['kategori']; ?></td>
+                            <td><?php echo e($buku['kategori']); ?></td>
                             <td><?php echo date('Y-m-d H:i:s', strtotime($buku['tanggal_ditambahkan'])); ?></td>
                             <td>
                                 <a href="edit.php?id=<?php echo $buku['id']; ?>" class="btn-edit">Edit</a>
